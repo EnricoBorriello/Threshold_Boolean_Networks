@@ -2,7 +2,7 @@ import numpy as np
 import networkx as nx
 
 def label_to_state (label, digits):
-    return np.array(map(int,list(format(label,'0'+str(digits)+'b'))))
+    return np.array(list(map(int,list(format(label,'0'+str(digits)+'b')))))
 
 def state_to_label (state):
     return int(''.join(map(str,state)),2)
